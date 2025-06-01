@@ -7,7 +7,10 @@
     <h1>Products</h1>
     <ul>
         {% for product in products %}
-        <li>{{ product.name }} - ${{ product.price }}</li>
+        <li>
+            <img src="{{ product.image_url }}" alt="{{ product.name }}" width="150" />
+            <p>{{ product.name }} - ${{ product.price }}</p>
+        </li>
         {% endfor %}
     </ul>
     <a href="/">Home</a>
